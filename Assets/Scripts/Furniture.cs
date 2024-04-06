@@ -32,6 +32,7 @@ public class Furniture : MonoBehaviour
             {
                 hinge.connectedBody = rigidBod;
                 player.lockJump(false);
+                player.isGrabbing(true);
                 
             }
             
@@ -40,6 +41,7 @@ public class Furniture : MonoBehaviour
         {
             hinge.connectedBody = baseRigidBod;
             player.lockJump(true);
+            player.isGrabbing(false);
 
         }
 

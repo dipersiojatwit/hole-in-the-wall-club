@@ -252,4 +252,9 @@ public class Player : MonoBehaviour
 
     }
 
+    public void isGrabbing(bool status)
+    {
+        animator.SetBool("isGrabbing", status);
+    }
+
 }

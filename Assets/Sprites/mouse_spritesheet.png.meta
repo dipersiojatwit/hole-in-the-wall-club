@@ -319,6 +319,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: mouse_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 320
+        width: 200
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7392475b7bdbac478383db3be5b233b
+      internalID: -1601233720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouse_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 320
+        width: 200
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9157e9b57f521504686f491cfea6f325
+      internalID: 2093798771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -332,6 +374,8 @@ TextureImporter:
     nameFileIdTable:
       mouse_spritesheet_0: -1282013133
       mouse_spritesheet_1: -1095884191
+      mouse_spritesheet_10: -1601233720
+      mouse_spritesheet_11: 2093798771
       mouse_spritesheet_2: -833146706
       mouse_spritesheet_3: 338387218
       mouse_spritesheet_4: -1197893724
