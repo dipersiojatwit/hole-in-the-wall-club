@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d94065760f957d24c875f1b45793f85f
+guid: a9c2126fd93da644d91a3e4c5c85d344
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mouse_spritesheet_0
+      name: ember_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
-        width: 200
-        height: 160
+        y: 125
+        width: 100
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f7dc28253197d43a2add3d4784caec
-      internalID: -1282013133
+      spriteID: 8354d15de722d2045bfa7467e3b1af0d
+      internalID: 703469473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouse_spritesheet_1
+      name: ember_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 125
+        width: 100
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0737f4b9aaaba594eb8cbb5da214da3a
+      internalID: 1264777942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ember_spritesheet_2
       rect:
         serializedVersion: 2
         x: 200
-        y: 640
-        width: 200
-        height: 160
+        y: 125
+        width: 100
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +166,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b14dc95f707a6d645be47b5d80f193d4
-      internalID: -1095884191
+      spriteID: a2f2122f30cfca94c904a7ad9ef1e363
+      internalID: -977789292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouse_spritesheet_2
+      name: ember_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 125
+        width: 100
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14cd5ed4b0a03746a3e41c50636c0ef
+      internalID: 1169869141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ember_spritesheet_4
       rect:
         serializedVersion: 2
         x: 400
-        y: 640
-        width: 200
-        height: 160
+        y: 125
+        width: 100
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,41 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcf70961529b69d49b95bd46548ca757
-      internalID: -833146706
+      spriteID: b6415814e0e41a64c9f44c6ecadf3106
+      internalID: 904682129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouse_spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 640
-        width: 200
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e102e5f73cddeef4e9dc43d0188bc00f
-      internalID: 338387218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mouse_spritesheet_4
+      name: ember_spritesheet_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 480
-        width: 200
-        height: 160
+        y: 0
+        width: 100
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +229,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc8ba05bfcf040440ae87951f457f7fa
-      internalID: -1197893724
+      spriteID: 60f38a04fba6b6940a0eb9f711d49ccf
+      internalID: 564694760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouse_spritesheet_5
+      name: ember_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eda45c28d2518c4e8e19d070e152f3f
+      internalID: 1201357211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ember_spritesheet_7
       rect:
         serializedVersion: 2
         x: 200
-        y: 480
-        width: 200
-        height: 160
+        y: 0
+        width: 100
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +271,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8825bc2012287df419ba5534b2170ba4
-      internalID: 2135917823
+      spriteID: 4b963c7c09170c04eb4d43e7f0f7d38f
+      internalID: -1514594851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouse_spritesheet_6
+      name: ember_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33cce006e01b45a48bac1ed2811aadbf
+      internalID: 574974657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ember_spritesheet_9
       rect:
         serializedVersion: 2
         x: 400
-        y: 480
-        width: 200
-        height: 160
+        y: 0
+        width: 100
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,113 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7eeb376b06455b49b170d4f9089158f
-      internalID: 1782605363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mouse_spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 480
-        width: 200
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ed761b294c60234783ee3a2434bb7b2
-      internalID: -1712267465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mouse_spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 320
-        width: 200
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 007bba4745f3e094eb70fc50eaff93b7
-      internalID: 1873973020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mouse_spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 320
-        width: 200
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bedd288c1d5d90348b602cb2b59ca25d
-      internalID: 1783691229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mouse_spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 320
-        width: 200
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7392475b7bdbac478383db3be5b233b
-      internalID: -1601233720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mouse_spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 320
-        width: 200
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9157e9b57f521504686f491cfea6f325
-      internalID: 2093798771
+      spriteID: d4838dd34be0bd540bf27bfa173d5fdd
+      internalID: 1086225028
       vertices: []
       indices: 
       edges: []
@@ -372,18 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mouse_spritesheet_0: -1282013133
-      mouse_spritesheet_1: -1095884191
-      mouse_spritesheet_10: -1601233720
-      mouse_spritesheet_11: 2093798771
-      mouse_spritesheet_2: -833146706
-      mouse_spritesheet_3: 338387218
-      mouse_spritesheet_4: -1197893724
-      mouse_spritesheet_5: 2135917823
-      mouse_spritesheet_6: 1782605363
-      mouse_spritesheet_7: -1712267465
-      mouse_spritesheet_8: 1873973020
-      mouse_spritesheet_9: 1783691229
+      ember_spritesheet_0: 703469473
+      ember_spritesheet_1: 1264777942
+      ember_spritesheet_2: -977789292
+      ember_spritesheet_3: 1169869141
+      ember_spritesheet_4: 904682129
+      ember_spritesheet_5: 564694760
+      ember_spritesheet_6: 1201357211
+      ember_spritesheet_7: -1514594851
+      ember_spritesheet_8: 574974657
+      ember_spritesheet_9: 1086225028
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

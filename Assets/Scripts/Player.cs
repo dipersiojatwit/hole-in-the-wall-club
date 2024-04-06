@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,9 +26,9 @@ public class Player : MonoBehaviour
     private RaycastHit2D raycastHit;
     private RaycastHit2D[] hitBuffer;
     private List<RaycastHit2D> hitList;
-
     //other stuff
     private Animator animator;
+    private bool canJump;
     
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         hitList = new List<RaycastHit2D>();
         hitBuffer = new RaycastHit2D[16];
+        canJump = true;
 
     }
 
@@ -67,14 +69,14 @@ public class Player : MonoBehaviour
     /// Updates the velocity member variable with the velocity that we want to go this frame
     /// </summary>
     public void computeVelocity()
-    {
+    {   
         //if we are grounded..
         if (isGrounded)
         {
             //kill our y velocity
             velocity.y = 0.0f;
             //If we press the jump button while grounded...
-            if (jumpHeld)
+            if (jumpHeld && canJump)
             {   
                 //set our y velocity to the jump take off speed
                 velocity.y = jumpSpeed;
@@ -243,4 +245,16 @@ public class Player : MonoBehaviour
         }
 
     }
+
+    public void lockJump(bool status)
+    {
+        canJump = status;
+
+    }
+
+    public void isGrabbing(bool status)
+    {
+        animator.SetBool("isGrabbing", status);
+    }
+
 }
