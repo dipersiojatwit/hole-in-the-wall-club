@@ -27,12 +27,11 @@ public class Furniture : MonoBehaviour
     {
         if (interactTrigger && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("interact");
+            player.isGrabbing(true);
             if (hinge.connectedBody != rigidBod)
             {
                 hinge.connectedBody = rigidBod;
                 player.lockJump(false);
-                player.isGrabbing(true);
                 
             }
             

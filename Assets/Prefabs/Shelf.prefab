@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6440153108292757674}
   m_Layer: 6
   m_Name: Shelf
-  m_TagString: Ground
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
