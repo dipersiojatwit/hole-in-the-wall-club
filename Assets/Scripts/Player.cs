@@ -257,4 +257,9 @@ public class Player : MonoBehaviour
         animator.SetBool("isGrabbing", status);
     }
 
+    public void damage()
+    {
+        this.gameObject.SetActive(false);
+    }
+
 }

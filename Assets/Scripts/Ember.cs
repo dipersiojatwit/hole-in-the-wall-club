@@ -32,7 +32,14 @@ public class Ember : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        lifeTime -= Time.deltaTime;
+
+        if (lifeTime <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+
         if (moveLeft && canMove)
         {
             this.transform.Translate(Vector3.left * speed * Time.deltaTime);
@@ -43,9 +50,17 @@ public class Ember : MonoBehaviour
         }
 
         if (isDamaging)
-        {
+        {   
             furniture.damage(1);
+
+            if (furniture.damage(1))
+            {
+                canMove = true;
+            }
+
         }
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -71,6 +86,11 @@ public class Ember : MonoBehaviour
         {   
             moveLeft = true;
             moveRight = false;
+        }
+
+        if (other.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<Player>().damage();
         }
     }
 }
