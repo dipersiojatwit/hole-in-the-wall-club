@@ -90,7 +90,7 @@ public class Ember : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Player>().damage();
+            other.gameObject.GetComponent<Player>().damage(1);
         }
     }
 }

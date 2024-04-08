@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -28,7 +29,9 @@ public class Player : MonoBehaviour
     private List<RaycastHit2D> hitList;
     //other stuff
     private Animator animator;
+    public TMP_Text lifeCount;
     private bool canJump;
+    public int lives;
     
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,7 @@ public class Player : MonoBehaviour
         hitList = new List<RaycastHit2D>();
         hitBuffer = new RaycastHit2D[16];
         canJump = true;
+        //lifeCount.SetText("x" + lives);
 
     }
 
@@ -257,9 +261,29 @@ public class Player : MonoBehaviour
         animator.SetBool("isGrabbing", status);
     }
 
-    public void damage()
+    public void damage(int damage)
     {
-        this.gameObject.SetActive(false);
+        lives -= damage;
+        updateLives();
+    }
+
+    private void updateLives()
+    {
+        lifeCount.text = "x" + lives;
+
+        if (lives < 0)
+        {
+            this.gameObject.SetActive(false);
+            lifeCount.text = "x" + 0;
+        }
+    }
+
+    private void reset()
+    {
+        lives = 3;
+        updateLives();
+        this.gameObject.SetActive(true);
+        
     }
 
 }
