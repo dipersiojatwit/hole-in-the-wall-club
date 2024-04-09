@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Ground
   - Furniture
+  - LeftPillar
+  - RightPillar
+  - Ant
+  - PlatformIndicator
+  - JumpPoint
+  - PlatformIndicator2
   layers:
   - Default
   - TransparentFX

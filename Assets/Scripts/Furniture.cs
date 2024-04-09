@@ -13,12 +13,14 @@ public class Furniture : MonoBehaviour
     public Rigidbody2D baseRigidBod;
     private HingeJoint2D hinge;
     private bool interactTrigger;
+    private int startHealth;
     // Start is called before the first frame update
     void Start()
     {
         hinge = GetComponent<HingeJoint2D>();
         player = playerObj.GetComponent<Player>();
         animator = GetComponent<Animator>();
+        startHealth = health;
 
     }
 
@@ -27,12 +29,11 @@ public class Furniture : MonoBehaviour
     {
         if (interactTrigger && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("interact");
+            player.isGrabbing(true);
             if (hinge.connectedBody != rigidBod)
             {
                 hinge.connectedBody = rigidBod;
                 player.lockJump(false);
-                player.isGrabbing(true);
                 
             }
             
@@ -45,15 +46,20 @@ public class Furniture : MonoBehaviour
 
         }
 
-        if (this.health <= health / 2 && !animator.GetBool("isVeryDamaged"))
+        if (health <= startHealth / 2)
         {
             animator.SetBool("isDamaged", true);
         }
 
-        if (this.health <= health / 4)
+        if (health <= startHealth / 4)
         {
             animator.SetBool("isDamaged", false);
             animator.SetBool("isVeryDamaged", true);
+        }
+
+        if (this.health <= 1)
+        {
+            Destroy(this.gameObject);
         }
     }
 
@@ -76,14 +82,16 @@ public class Furniture : MonoBehaviour
 
     }
 
-    public void damage(int damage)
+    public bool damage(int damage)
     {
         this.health -= damage;
+        return health < 5;
 
-        if (this.health <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+    }
+
+    public int getHealth()
+    {
+        return health;
     }
 
 }
