@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class Ember : MonoBehaviour
     private bool canMove;
     private bool moveLeft;
     private bool moveRight;
+    public ParticleSystem fireDamageEffect;
     private Furniture furniture;
     // Start is called before the first frame update
     void Start()
@@ -35,8 +37,10 @@ public class Ember : MonoBehaviour
     {   
         lifeTime -= Time.deltaTime;
 
-        if (lifeTime <= 0)
-        {
+        if (lifeTime <= 1.5)
+        {   
+            Vector3 pos = this.transform.position;
+            Instantiate(fireDamageEffect, pos, Quaternion.identity);
             Destroy(this.gameObject);
         }
 
@@ -52,10 +56,10 @@ public class Ember : MonoBehaviour
         if (isDamaging)
         {   
             furniture.damage(1);
-
             if (furniture.damage(1))
             {
                 canMove = true;
+                isDamaging = false;
             }
 
         }
@@ -68,6 +72,7 @@ public class Ember : MonoBehaviour
         if (other.CompareTag("Furniture"))
         {
             furniture = other.gameObject.GetComponent<Furniture>();
+            Instantiate(fireDamageEffect, other.transform);
             isDamaging = true;
             canMove = false;
         }
@@ -93,4 +98,5 @@ public class Ember : MonoBehaviour
             other.gameObject.GetComponent<Player>().damage(1);
         }
     }
+
 }
