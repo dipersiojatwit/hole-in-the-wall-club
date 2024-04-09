@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  pointEffect: {fileID: 31579466082027856, guid: afccd913d51fc884894763c76d10840d, type: 3}
 --- !u!50 &8156597918577905533
 Rigidbody2D:
   serializedVersion: 4

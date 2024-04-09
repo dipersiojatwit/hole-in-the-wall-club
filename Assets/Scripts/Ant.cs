@@ -14,6 +14,7 @@ public class Ant : MonoBehaviour
     private Rigidbody2D rigidBod;
     private Animator animator;
     private SpriteRenderer sprite;
+    public ParticleSystem pointEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -135,8 +136,18 @@ public class Ant : MonoBehaviour
         }
 
         if (other.CompareTag("Player"))
-        {
-            other.gameObject.GetComponent<Player>().damage(1);
+        {   
+            if (other.gameObject.GetComponent<Player>().isInAir())
+            {   
+                Vector3 pos = this.transform.position;
+                Instantiate(pointEffect, pos, Quaternion.identity);
+                other.gameObject.GetComponent<Player>().updateScore(200);
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                other.gameObject.GetComponent<Player>().damage(1);
+            }
         }
         
     }

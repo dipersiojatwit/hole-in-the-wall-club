@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     //other stuff
     private Animator animator;
     public TMP_Text lifeCount;
+    public TMP_Text roundScoreText;
+    private int roundScore;
     private bool canJump;
     public int lives;
     
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour
         hitList = new List<RaycastHit2D>();
         hitBuffer = new RaycastHit2D[16];
         canJump = true;
+        
         //lifeCount.SetText("x" + lives);
 
     }
@@ -259,12 +262,27 @@ public class Player : MonoBehaviour
     public void isGrabbing(bool status)
     {
         animator.SetBool("isGrabbing", status);
+
+    }
+
+    public bool isInAir()
+    {
+        return !isGrounded;
+
     }
 
     public void damage(int damage)
     {
         lives -= damage;
         updateLives();
+
+    }
+
+    public void updateScore(int score)
+    {   
+        roundScore += score;
+        roundScoreText.text = "" + roundScore;
+
     }
 
     private void updateLives()
@@ -276,14 +294,17 @@ public class Player : MonoBehaviour
             this.gameObject.SetActive(false);
             lifeCount.text = "x" + 0;
         }
+
     }
 
-    private void reset()
+    private void resetPlayer()
     {
         lives = 3;
         updateLives();
+        roundScore = 0;
+        roundScoreText.text = "" + 0;
         this.gameObject.SetActive(true);
-        
+
     }
 
 }

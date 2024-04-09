@@ -6,7 +6,8 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {   
     public GameObject[] enemies;
-    public float timeBetweenSpawns;
+    public float minTimeBetweenSpawns;
+    public float maxTimeBetweenSpawns;
     public float holeSpawnTime;
     private float spawnTimer;
     private float timeRemaining = 2;
@@ -16,7 +17,7 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnTimer = timeBetweenSpawns;
+        spawnTimer = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sortingOrder = -5;
         
@@ -41,7 +42,7 @@ public class Spawner : MonoBehaviour
                 // Quaternion for gimble lock prevention, spawn with Instantiate
                 Instantiate(enemy, pos, Quaternion.identity);
                 // reset timer
-                spawnTimer = timeBetweenSpawns;
+                spawnTimer = maxTimeBetweenSpawns;
             
             }
             else if (timeRemaining <= 0)
