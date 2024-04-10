@@ -12,6 +12,7 @@ TagManager:
   - PlatformIndicator
   - JumpPoint
   - PlatformIndicator2
+  - Item
   layers:
   - Default
   - TransparentFX

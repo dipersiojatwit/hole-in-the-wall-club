@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Player : MonoBehaviour
 {
@@ -31,7 +32,9 @@ public class Player : MonoBehaviour
     private Animator animator;
     public TMP_Text lifeCount;
     public TMP_Text roundScoreText;
+    public TMP_Text woodCountText;
     private int roundScore;
+    private int woodCount;
     private bool canJump;
     public int lives;
     
@@ -43,6 +46,8 @@ public class Player : MonoBehaviour
         hitList = new List<RaycastHit2D>();
         hitBuffer = new RaycastHit2D[16];
         canJump = true;
+        roundScore = 0;
+        woodCount = 0;
         
         //lifeCount.SetText("x" + lives);
 
@@ -278,11 +283,23 @@ public class Player : MonoBehaviour
 
     }
 
+    public void updateWoodCount(int count)
+    {
+        woodCount += count;
+        woodCountText.text = "" + woodCount;
+    }
+
     public void updateScore(int score)
     {   
         roundScore += score;
         roundScoreText.text = "" + roundScore;
 
+    }
+
+    public int getWood()
+    {
+        return woodCount;
+        
     }
 
     private void updateLives()
