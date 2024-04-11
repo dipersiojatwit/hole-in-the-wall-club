@@ -2,7 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -31,7 +34,13 @@ public class Player : MonoBehaviour
     private Animator animator;
     public TMP_Text lifeCount;
     public TMP_Text roundScoreText;
+    public TMP_Text woodCountText;
+    public GameObject reset;
+    public GameObject menu;
+    public GameObject resetSign;
+    public GameObject menuSign;
     private int roundScore;
+    private int woodCount;
     private bool canJump;
     public int lives;
     
@@ -43,6 +52,8 @@ public class Player : MonoBehaviour
         hitList = new List<RaycastHit2D>();
         hitBuffer = new RaycastHit2D[16];
         canJump = true;
+        roundScore = 0;
+        woodCount = 0;
         
         //lifeCount.SetText("x" + lives);
 
@@ -278,6 +289,12 @@ public class Player : MonoBehaviour
 
     }
 
+    public void updateWoodCount(int count)
+    {
+        woodCount += count;
+        woodCountText.text = "x" + woodCount;
+    }
+
     public void updateScore(int score)
     {   
         roundScore += score;
@@ -285,26 +302,49 @@ public class Player : MonoBehaviour
 
     }
 
+    public int getWood()
+    {
+        return woodCount;
+        
+    }
+
     private void updateLives()
     {
         lifeCount.text = "x" + lives;
 
-        if (lives < 0)
+        if (lives <= 0)
         {
-            this.gameObject.SetActive(false);
+            resetSign.SetActive(true);
+            menuSign.SetActive(true);
+            menu.SetActive(true);
+            reset.SetActive(true);
             lifeCount.text = "x" + 0;
+            this.gameObject.SetActive(false);
         }
 
     }
 
-    private void resetPlayer()
+    public void resetPlayer()
     {
-        lives = 3;
+        this.gameObject.SetActive(true);
+        lives = 5;
         updateLives();
         roundScore = 0;
-        roundScoreText.text = "" + 0;
-        this.gameObject.SetActive(true);
+        updateScore(0);
+        woodCount = 0;
+        updateWoodCount(0);
+        reset.SetActive(false);
+        resetSign.SetActive(false);
+        menu.SetActive(false);
+        menuSign.SetActive(false);
+        this.gameObject.transform.position = new Vector3(0, -2.28f, 0);
+        SceneManager.LoadScene("Main");
+    
 
+    }
+
+    public void onMenuClick(){
+        SceneManager.LoadScene("MainMenu");
     }
 
 }

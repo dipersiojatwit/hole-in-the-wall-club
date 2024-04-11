@@ -15,6 +15,7 @@ public class Ant : MonoBehaviour
     private Animator animator;
     private SpriteRenderer sprite;
     public ParticleSystem pointEffect;
+    public GameObject woodDrop;
     // Start is called before the first frame update
     void Start()
     {
@@ -141,6 +142,7 @@ public class Ant : MonoBehaviour
             {   
                 Vector3 pos = this.transform.position;
                 Instantiate(pointEffect, pos, Quaternion.identity);
+                Instantiate(woodDrop, pos, Quaternion.identity);
                 other.gameObject.GetComponent<Player>().updateScore(200);
                 Destroy(this.gameObject);
             }
