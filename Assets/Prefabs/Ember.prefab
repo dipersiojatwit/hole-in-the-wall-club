@@ -169,9 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   speed: 2
-  lifeTime: 10
+  lifeTime: 25
   fireDamageEffect: {fileID: 1128872915294969437, guid: 6fb4454ffa94bdf409e7d510566e96dc, type: 3}
-  sizzleEffect: {fileID: 3257513853014599899, guid: 274df1158118a094db4e359a9bba14dd, type: 3}
 --- !u!50 &633965573034890301
 Rigidbody2D:
   serializedVersion: 4

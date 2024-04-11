@@ -19,9 +19,9 @@ public class WorkBench : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (interactTrigger && Input.GetKeyDown(KeyCode.UpArrow) && player.getWood() >= 10)
+        if (interactTrigger && Input.GetKeyDown(KeyCode.UpArrow) && player.getWood() >= 5)
         {
-            player.updateWoodCount(-10);
+            player.updateWoodCount(-5);
             shelf[i].transform.position = this.transform.position;
             i++;
             
